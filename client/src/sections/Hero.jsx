@@ -11,6 +11,16 @@ import PROFILE_PIC from "../assets/images/profile-pic.png";
 // import ICON_4 from "../assets/images/icon-4.png"
 
 const Hero = () => {
+  const handleDownloads = () => {
+    const blob = new Blob([`Hello, this is a dynamic PDF content!`], {
+      type: "application/pdf",
+    });
+    const link = document.createElement("a");
+    link.href = URL.createObjectURL(blob);
+    link.download = `dynamic-files.pdf`;
+    link.click();
+  };
+
   return (
     <section id="hero" className="container mx-auto px-8">
       <div className="flex flex-col lg:flex-row gap-14 items-center justify-between mt-[80px]">
@@ -51,7 +61,10 @@ const Hero = () => {
             >
               View My Work
             </Link>
-            <button className="flex-1 md:flex-none action-btn btn-scale-anim">
+            <button
+              onClick={handleDownloads}
+              className="flex-1 md:flex-none action-btn btn-scale-anim"
+            >
               Download Resume
             </button>
           </div>

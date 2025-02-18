@@ -47,7 +47,7 @@ export const SKILLS_TAB = [
 
 export const SKILLS = [
     {
-        id:"01",
+        id:nanoid(),
         icon: FaReact,
         skill: "React JS",
         progress: 78,
@@ -55,63 +55,63 @@ export const SKILLS = [
         description:"Experienced in building scalable, high-performance web applications using React.js. I specialize in creating dynamic, component-driven interfaces that are not only visually appealing but also responsive and user-focused. "
     },
     {
-        id:"02",
+        id:nanoid(),
         icon: FaHtml5,
         skill: "HTML",
         progress: 86,
         type:"frontend",
-        description:"Experinced in building scalable, component-driven web applications using React js."
+        description:"Proficient in structuring semantic markup, optimizing SEO, and ensuring compatibility across different browsers and devices. Strong focus on creating user-friendly, component-driven designs with clean, maintainable code."
     },
     {
-        id:"03",
+        id:nanoid(),
         icon: FaCss3,
         skill: "CSS",
         progress: 72,
         type:"frontend",
-        description:"Experinced in building scalable, component-driven web applications using React js."
+        description:"Proficient in creating fluid layouts with Flexbox and Grid, implementing responsive designs, and ensuring cross-browser compatibility. Strong expertise in theming, animations, and optimizing styles for performance and accessibility."
     },
     {
-        id:"04",
+        id:nanoid(),
         icon: BiLogoJavascript,
         skill: "JavaScript",
         progress: 81,
         type:"frontend",
-        description:"Experinced in building scalable, component-driven web applications using React js."
+        description:"Proficient in writing clean, efficient code for DOM manipulation, event handling, and asynchronous operations. Strong knowledge of ES6+ features, as well as frameworks like React.js, for creating responsive, scalable, and user-centric applications."
     },
     {
-        id:"05",
+        id:nanoid(),
         icon: FaNodeJs,
         skill: "Node JS",
         progress: 65,
         type:"backend",
-        description:"Experinced in building scalable, component-driven web applications using React js."
+        description:"Proficient in building RESTful APIs, managing asynchronous operations, and integrating with databases (MongoDB, MySQL). Skilled in using Express.js for routing, middleware, and handling HTTP requests efficiently, ensuring optimal performance and scalability."
     },
     {
-        id:"06",
+        id:nanoid(),
         icon: SiExpress,
         skill: "Express.js",
         progress: 53,
         type:"backend",
-        description:"Experinced in building scalable, component-driven web applications using React js."
+        description:"Proficient in creating robust server-side applications, managing routing, middleware, and handling HTTP requests. Skilled in integrating Express.js with databases, implementing authentication, and optimizing API performance for seamless and efficient web solutions."
     },
     {
-        id:"07",
+        id:nanoid(),
         icon: SiMongodb,
         skill: "MongoDB",
         progress: 57,
         type:"backend",
-        description:"Experinced in building scalable, component-driven web applications using React js."
+        description:"Proficient in designing and managing NoSQL databases, creating schemas, and performing CRUD operations. Skilled in integrating MongoDB with Node.js and Express.js, ensuring efficient data storage and retrieval for dynamic, high-performance applications."
     },
     {
-        id:"08",
+        id:nanoid(),
         icon: SiMysql,
         skill: "MySql",
         progress: 30,
         type:"backend",
-        description:"Experinced in building scalable, component-driven web applications using React js."
+        description:"Proficient in designing relational databases, writing complex SQL queries, and performing CRUD operations. Skilled in integrating MySQL with backend technologies like Node.js, ensuring efficient data management, and optimizing database performance for scalable applications."
     },
     {
-        id:"10",
+        id:nanoid(),
         icon: FaGitAlt,
         skill: "Git",
         progress: 91,
@@ -119,36 +119,36 @@ export const SKILLS = [
         description:"Experinced in building scalable, component-driven web applications using React js."
     },
     {
-        id:"11",
+        id:nanoid(),
         icon: VscVscode,
         skill: "VsCode",
         progress: 96,
         type:"tools",
-        description:"Experinced in building scalable, component-driven web applications using React js."
+        description:"Proficient in creating and managing branches, handling merges, resolving conflicts, and collaborating with teams using Git workflows. Skilled in using GitHub for repository management, pull requests, and maintaining code quality across projects."
     },
     {
-        id:"12",
+        id:nanoid(),
         icon: VscCommentUnresolved,
         skill: "Problem-solving",
         progress: 90,
         type:"soft-skills",
-        description:"Experinced in building scalable, component-driven web applications using React js."
+        description:"Proficient in breaking down problems into manageable parts, applying logical thinking, and utilizing algorithms to find optimal solutions. Experienced in debugging, troubleshooting, and optimizing code to improve performance and functionality."
     },
     {
-        id:"13",
+        id:nanoid(),
         icon: VscTerminalPowershell,
         skill: "Attention to Details",
         progress: 85,
         type:"soft-skills",
-        description:"Experinced in building scalable, component-driven web applications using React js."
+        description:"Skilled in reviewing code for accuracy, ensuring clean, well-organized structures, and maintaining consistency across projects. Committed to delivering high-quality work by identifying and addressing potential issues early, resulting in optimized, error-free applications."
     },
     {
-        id:"14",
+        id:nanoid(),
         icon: MdGroups3,
         skill: "Collaboration",
         progress: 92,
         type:"soft-skills",
-        description:"Experinced in building scalable, component-driven web applications using React js."
+        description:"Skilled in working with diverse teams, reviewing and submitting pull requests, and following best practices for code contribution. Proficient in using GitHub to collaborate, manage issues, and improve open-source projects while maintaining high code quality and efficiency."
     },
 ]
 
