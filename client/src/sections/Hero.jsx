@@ -9,17 +9,18 @@ import PROFILE_PIC from "../assets/images/profile-pic.png";
 // import ICON_2 from "../assets/images/icon-2.png"
 // import ICON_3 from "../assets/images/icon-3.png"
 // import ICON_4 from "../assets/images/icon-4.png"
+import resume from "../assets/pdf/smmasrafi.pdf";
 
 const Hero = () => {
-  const handleDownloads = () => {
-    const blob = new Blob([`Hello, this is a dynamic PDF content!`], {
-      type: "application/pdf",
-    });
-    const link = document.createElement("a");
-    link.href = URL.createObjectURL(blob);
-    link.download = `dynamic-files.pdf`;
-    link.click();
-  };
+  // const handleDownloads = () => {
+  //   const blob = new Blob(['../assets/pdf/smmasrafi.pdf'], {
+  //     type: "application/pdf",
+  //   });
+  //   const link = document.createElement("a");
+  //   link.href = URL.createObjectURL(blob);
+  //   link.download = `smmasrafi.pdf`;
+  //   link.click();
+  // };
 
   return (
     <section id="hero" className="container mx-auto px-8">
@@ -61,14 +62,16 @@ const Hero = () => {
             >
               View My Work
             </Link>
-            <button
-              onClick={handleDownloads}
-              className="flex-1 md:flex-none action-btn btn-scale-anim"
+            <a
+              href={resume}
+              download="Resume"
+              // onClick={handleDownloads}
+              className="flex items-center justify-center action-btn btn-scale-anim"
             >
               Download Resume
-            </button>
+            </a>
           </div>
-          <div className="flex gap-4 mt-6">
+          <div className="flex justify-center lg:justify-start gap-4 md:gap-7 mt-6">
             {ABOUT_ME.socialLinks.map((item) => {
               return (
                 <a
