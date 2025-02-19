@@ -1,4 +1,4 @@
-import { useCallback, useState, useEffect } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 import useEmblaCarousel from "embla-carousel-react";
 import { IoIosArrowForward } from "react-icons/io";
@@ -17,13 +17,15 @@ const MyProjects = () => {
   }, [emblaApi]);
 
   useEffect(() => {
-    if(!emblaApi) return
-    emblaApi.on("select", updateScrollButtons)
-    updateScrollButtons()
-  
-    
-  }, [emblaApi, updateScrollButtons])
-  
+    if (!emblaApi) return;
+
+    emblaApi.on("select", updateScrollButtons);
+    updateScrollButtons();
+
+    return () => {
+      emblaApi.off("select", updateScrollButtons);
+    };
+  }, [emblaApi, updateScrollButtons]);
 
   return (
     <section id="projects" className="bg-background mt-14">
@@ -50,6 +52,7 @@ const MyProjects = () => {
                       imgUrl={project.image}
                       title={project.title}
                       tags={project.tags}
+                      link={project.link}
                     />
                   </div>
                 );
@@ -57,28 +60,27 @@ const MyProjects = () => {
             </div>
           </div>
 
-        {/* Navigation Buttons */}
-        <button
-          className={`arrow-btn -left-5 ${
-            !canScrollPrev ? "opacity-50 cursor-not-allowed" : ""
-          }`}
-          onClick={() => emblaApi && emblaApi.scrollPrev()}
-          disabled={!canScrollPrev}
-        >
-          <IoIosArrowForward className="rotate-180" />
-        </button>
+          {/* Navigation Buttons */}
+          <button
+            className={`arrow-btn -left-5 ${
+              !canScrollPrev ? "opacity-50 cursor-not-allowed" : ""
+            }`}
+            onClick={() => emblaApi && emblaApi.scrollPrev()}
+            disabled={!canScrollPrev}
+          >
+            <IoIosArrowForward className="rotate-180" />
+          </button>
 
-        <button
-          className={`arrow-btn -right-5 ${
-            !canScrollPrev ? "opacity-50 cursor-not-allowed" : ""
-          }`}
-          onClick={() => emblaApi && emblaApi.scrollNext()}
-          disabled={!canScrollPrev}
-        >
-          <IoIosArrowForward />
-        </button>
+          <button
+            className={`arrow-btn -right-5 ${
+              !canScrollNext ? "opacity-50 cursor-not-allowed" : ""
+            }`}
+            onClick={() => emblaApi && emblaApi.scrollNext()}
+            disabled={!canScrollNext}
+          >
+            <IoIosArrowForward />
+          </button>
         </div>
-
       </div>
     </section>
   );

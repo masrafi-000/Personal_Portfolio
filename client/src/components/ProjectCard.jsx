@@ -1,6 +1,6 @@
 import React from "react";
 
-const ProjectCard = ({ imgUrl, title, tags }) => {
+const ProjectCard = ({ imgUrl, title, tags, link }) => {
   return (
     <div className="h-full bg-white rounded-xl overflow-hidden shadow-md mx-2">
       <img
@@ -10,11 +10,20 @@ const ProjectCard = ({ imgUrl, title, tags }) => {
       />
 
       <div className="px-4 py-5">
-        <h3 className="text-base font-semibold line-clamp-2 overflow-hidden text-ellipsis ">{title}</h3>
+        <a
+          href={link}
+          target="_blank"
+          className="text-base font-semibold line-clamp-2 overflow-hidden text-ellipsis hover:text-primary cursor-pointer  hover:transition-transform hover:scale-105 hover:ease-in-out hover:duration-300 "
+        >
+          {title}
+        </a>
         <div className="flex flex-wrap gap-2 mt-2">
           {tags.map((tag, index) => {
             return (
-              <span key={index} className="text-xs text-secondary bg-orange-100 px-3 py-1 rounded">
+              <span
+                key={index}
+                className="text-xs text-secondary bg-orange-100 px-3 py-1 rounded "
+              >
                 {tag}
               </span>
             );

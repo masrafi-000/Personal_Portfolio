@@ -19,8 +19,6 @@ import PROJECT_IMG_1 from "../assets/images/project-1.png"
 import PROJECT_IMG_2 from "../assets/images/project-2.png"
 import PROJECT_IMG_3 from "../assets/images/project-3.png"
 import PROJECT_IMG_4 from "../assets/images/project-4.png"
-import PROJECT_IMG_5 from "../assets/images/project-5.png"
-import PROJECT_IMG_6 from "../assets/images/project-6.png"
 
 export const MENU_LINKS = [
     {id:nanoid(), label:"Home", offset: -100, to: "hero"},
@@ -116,7 +114,7 @@ export const SKILLS = [
         skill: "Git",
         progress: 91,
         type:"tools",
-        description:"Experinced in building scalable, component-driven web applications using React js."
+        description:"Proficient in creating and managing branches, handling merges, resolving conflicts, and collaborating with teams using Git workflows. Skilled in using GitHub for repository management, pull requests, and maintaining code quality across projects."
     },
     {
         id:nanoid(),
@@ -124,7 +122,7 @@ export const SKILLS = [
         skill: "VsCode",
         progress: 96,
         type:"tools",
-        description:"Proficient in creating and managing branches, handling merges, resolving conflicts, and collaborating with teams using Git workflows. Skilled in using GitHub for repository management, pull requests, and maintaining code quality across projects."
+        description:"Proficient in using Visual Studio Code (VS Code) for efficient and streamlined development.Experienced in utilizing extensions, debugging tools, and integrated terminal for enhanced productivity. Skilled in customizing the editor with themes, snippets, and keybindings to optimize workflow and code management."
     },
     {
         id:nanoid(),
@@ -169,45 +167,37 @@ export const ABOUT_ME = {
 
 export const PROJECTS = [
     {
-        id: 1,
-        title: "Full stack Notes App using MERN | MongoDB, Express, React JS, Node JS",
+        id: nanoid(),
+        title: "Frontend Doctor Appointment Booking App using React | JavaScript, React JS, Tailwind CSS, Vite",
         image: PROJECT_IMG_1,
-        tags:["React", "Express", "MongoDB", "Node.js"]
+        tags:["React", "JavaScript", "Tailwind CSS", ],
+        link: "https://doctor-appointment-website-tau.vercel.app/"
 
     },
     {
-        id: 2,
-        title: "Full stack Notes App using MERN | MongoDB, Express, React JS, Node JS",
-        image: PROJECT_IMG_2,
-        tags:["React", "Express", "MongoDB", "Node.js"]
-
-    },
-    {
-        id: 3,
-        title: "Full stack Notes App using MERN | MongoDB, Express, React JS, Node JS",
+        id: nanoid(),
+        title: "Frontend Ecommerce WebApp using React | JavaScript, Three.js, React JS, Tailwind CSS, Vite",
         image: PROJECT_IMG_3,
-        tags:["React", "Express", "MongoDB", "Node.js"]
+        tags:["React", "JavaScript","Three.js" , "Tailwind CSS", ],
+        link: "https://apple-clone-mu-seven.vercel.app/"
 
     },
     {
-        id: 4,
-        title: "Full stack Notes App using MERN | MongoDB, Express, React JS, Node JS",
+        id: nanoid(),
+        title: "Full stack Personal Portfolio Website using React | JavaScript, Express, React JS, Node JS",
         image: PROJECT_IMG_4,
-        tags:["React", "Express", "MongoDB", "Node.js"]
-
+        tags:["React", "Express", "JavaScript", "Node.js", "Tailwind CSS"],
+        link: "https://personal-portfolio-pi-gray-20.vercel.app/"
     },
     {
-        id: 5,
-        title: "Full stack Notes App using MERN | MongoDB, Express, React JS, Node JS",
-        image: PROJECT_IMG_5,
-        tags:["React", "Express", "MongoDB", "Node.js"]
+        id: nanoid(),
+        title: "Frontend Basic Portfoli WebPage using React | JavaScript, React JS, Tailwind CSS, Vite",
+        image: PROJECT_IMG_2,
+        tags:["React", "JavaScript", "Tailwind CSS", ],
+        link:"https://portfolio-demo-fawn.vercel.app/"
 
     },
-    {
-        id: 6,
-        title: "Full stack Notes App using MERN | MongoDB, Express, React JS, Node JS",
-        image: PROJECT_IMG_6,
-        tags:["React", "Express", "MongoDB", "Node.js"]
-
-    },
+    
+    
+  
 ]
