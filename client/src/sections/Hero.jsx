@@ -9,7 +9,7 @@ import PROFILE_PIC from "../assets/images/profile-pic.png";
 // import ICON_2 from "../assets/images/icon-2.png"
 // import ICON_3 from "../assets/images/icon-3.png"
 // import ICON_4 from "../assets/images/icon-4.png"
-import resume from "../assets/pdf/smmasrafi.pdf";
+import resume from "../assets/pdf/Masrafi_Resume.pdf";
 
 const Hero = () => {
   // const handleDownloads = () => {
