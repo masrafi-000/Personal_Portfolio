@@ -4,7 +4,11 @@ import { IoPhonePortraitOutline } from "react-icons/io5";
 import ContactInfoCard from "../components/ContactInfoCard";
 import { ABOUT_ME } from "../utils/data";
 
+
 const ContactMe = () => {
+
+  const API_URI = "http://localhost:5000/send-email"
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -27,7 +31,7 @@ const ContactMe = () => {
     setIsLoading(true);
 
     try {
-      const response = await fetch("http://localhost:5000/send-email", {
+      const response = await fetch(API_URI, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
