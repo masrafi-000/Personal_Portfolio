@@ -9,17 +9,34 @@ const TechnicalProficiency = () => {
 
   const [activeTab, setActiveTab] = useState("all");
 
+  const [currentPage, setCurrentPage] = useState(1);
+  const skillsPerPage = 8;
+
+  // Calculate pagination
+  const totalPages = Math.ceil(tabData.length / skillsPerPage)
+  const startIndex = (currentPage - 1) * skillsPerPage;
+  const currentSkills = tabData.slice(startIndex, startIndex + skillsPerPage);
+
+  const handlePageChange = (page) => {
+    setCurrentPage(page);
+  };
+
+  // Reset to page 1 when tab changes
+
+
   const handleTabValueChange = (value) => {
     if (value == "all") {
       setTabData(SKILLS);
       setActiveTab("all");
       return;
+    } else {
+
+      const updateList = SKILLS.filter((skills) => skills.type === value);
+      setTabData(updateList);
+  
+      setActiveTab(value);
     }
-
-    const updateList = SKILLS.filter((skills) => skills.type === value);
-    setTabData(updateList);
-
-    setActiveTab(value);
+    setCurrentPage(1);
   };
 
   return (
@@ -41,7 +58,7 @@ const TechnicalProficiency = () => {
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-          {tabData.map((skill, index) => {
+          {currentSkills.map((skill, index) => {
             return (
               <motion.div  key={skill.id} 
                 initial={{opacity: 0, y:20}}
@@ -58,6 +75,42 @@ const TechnicalProficiency = () => {
             );
           })}
         </div>
+
+        {/* Pagination Controls */}
+          {
+            totalPages > 1 && (
+              <div className="flex justify-center items-center gap-2 mt-8">
+                <button 
+                  onClick={() => handlePageChange(currentPage - 1)}
+                  disabled={currentPage === 1}
+                  className={`px-3 py-2 rounded-lg ${currentPage === 1 ? 'opacity-50 cursor-not-allowed' : 'hover:bg-primary/10'}`}
+                >
+                  Previous
+                </button>
+                {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
+                  <button
+                    key={page}
+                    onClick={() => handlePageChange(page)}
+                    className={`px-3 py-2 rounded-lg ${
+                      currentPage === page 
+                        ? 'bg-primary text-white' 
+                        : 'hover:bg-primary/10'
+                    }`}
+                  >
+                    {page}
+                  </button>
+                ))}
+                <button 
+                  onClick={() => handlePageChange(currentPage + 1)}
+                  disabled={currentPage === totalPages}
+                  className={`px-3 py-2 rounded-lg ${currentPage === totalPages ? 'opacity-50 cursor-not-allowed' : 'hover:bg-primary/10'}`}
+                >
+                  Next
+                </button>
+              </div>
+            )
+          }
+
       </div>
     </section>
   );

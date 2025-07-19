@@ -9,7 +9,6 @@ import PROFILE_PIC from "../assets/images/profile-pic.png";
 // import ICON_2 from "../assets/images/icon-2.png"
 // import ICON_3 from "../assets/images/icon-3.png"
 // import ICON_4 from "../assets/images/icon-4.png"
-import resume from "../assets/pdf/Masrafi_Resume.pdf";
 
 const Hero = () => {
   // const handleDownloads = () => {
@@ -63,8 +62,8 @@ const Hero = () => {
               View My Work
             </Link>
             <a
-              href={resume}
-              download="Resume"
+              href="/Masrafi_Resume.pdf"
+              download="Masrafi_Resume"
               // onClick={handleDownloads}
               className="flex items-center justify-center action-btn btn-scale-anim"
             >
@@ -75,9 +74,10 @@ const Hero = () => {
             {ABOUT_ME.socialLinks.map((item) => {
               return (
                 <a
-                  key={item.label}
+                  key={item.id}
                   href={item.link}
                   target="_blank"
+                  rel="noopener noreferrer"
                   className="cursor-pointer group"
                 >
                   <item.icon className="text-3xl text-secondary transition-transform duration-300 group-hover:rotate-12 group-hover:scale-110 group-hover:translate-y-[-2px] group-hover:text-primary" />
