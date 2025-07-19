@@ -9,7 +9,7 @@ const SkillCard = ({ icon, skillName, description, progress }) => {
         <div className="flex-1">
           <div className="flex items-center justify-between">
             <p className="text-[13px] text-black font-medium">{skillName}</p>
-            <p className="text-xs text-secondary font-medium">{progress}</p>
+            <p className="text-xs text-secondary font-medium">{progress}%</p>
           </div>
 
           <div className="w-full bg-background rounded-md h-[5px] relative mt-2 ">
@@ -20,9 +20,7 @@ const SkillCard = ({ icon, skillName, description, progress }) => {
           </div>
         </div>
       </div>
-      <p className="text-xs text-gray-600 text-justify leading-5 mt-2">
-        {description}
-      </p>
+      
     </div>
   );
 };

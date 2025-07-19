@@ -14,7 +14,7 @@ app.use(express.json()); // Express has built-in JSON parsing, no need for body-
 // Configure Nodemailer
 const transporter = nodemailer.createTransport({
     host: 'smtp.gmail.com',
-    port: 456,
+    port: 465,
     secure:true,
     service: "gmail",
     auth: {
