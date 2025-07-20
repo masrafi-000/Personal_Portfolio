@@ -7,7 +7,7 @@ import { ABOUT_ME } from "../utils/data";
 
 const ContactMe = () => {
 
-  const API_URI = "http://localhost:5000/send-email"
+  const API_URI = "http://localhost:5000/api/send-email"
 
   const [formData, setFormData] = useState({
     name: "",
@@ -42,8 +42,14 @@ const ContactMe = () => {
       if (data.success) {
         setStatusMessage("Message sent succesfully!");
         setFormData({ name: "", email: "", message: "" });
+        setTimeout(() => {
+          setStatusMessage("");
+        }, 10000);
       } else {
         setStatusMessage("There was an error sending your message.");
+        setTimeout(() => {
+          setStatusMessage("");
+        }, 10000);
       }
     } catch (error) {
       console.log(error);
@@ -123,12 +129,14 @@ const ContactMe = () => {
                 placeholder="Message"
               />
 
-              <button type="submit" className="action-btn btn-scale-anim">
+              <button type="submit"
+                disabled={isLoading}
+                className={`action-btn btn-scale-anim ${isLoading ? "opacity-50 cursor-not-allowed" : ""}`}>
                 {isLoading ? "Sending..." : "Send Message"}
               </button>
             </form>
             {statusMessage && (
-              <p className="mt-4 text-center text-sm text-red-500">
+              <p className={`mt-4 text-center text-sm ${statusMessage.includes("sent") ? "text-green-500" : "text-red-500"} `}>
                 {statusMessage}
               </p>
             )}
