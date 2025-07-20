@@ -7,7 +7,7 @@ import { ABOUT_ME } from "../utils/data";
 
 const ContactMe = () => {
 
-  const API_URI = "http://localhost:5000/api/send-email"
+  const API_URI = "https://personal-portfolio-server-s5i9.onrender.com/api/send-email"
 
   const [formData, setFormData] = useState({
     name: "",
