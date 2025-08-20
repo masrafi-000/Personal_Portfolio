@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import React from "react";
+import PropTypes from "prop-types";
 
 const Tabs = ({ tabList, activeTab, onChange }) => {
   const getActiveStyles = (value) => {
@@ -32,6 +32,18 @@ const Tabs = ({ tabList, activeTab, onChange }) => {
       </div>
     </div>
   );
+};
+
+Tabs.propTypes = {
+  tabList: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+      value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+      label: PropTypes.string.isRequired,
+    })
+  ).isRequired,
+  activeTab: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+  onChange: PropTypes.func.isRequired,
 };
 
 export default Tabs;

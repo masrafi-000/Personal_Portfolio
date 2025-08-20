@@ -1,4 +1,6 @@
-import React from "react";
+
+
+import PropTypes from 'prop-types';
 
 const ContactInfoCard = ({ icon, text, link }) => {
   return (
@@ -15,6 +17,12 @@ const ContactInfoCard = ({ icon, text, link }) => {
       </a>
     </div>
   );
+};
+
+ContactInfoCard.propTypes = {
+  icon: PropTypes.node,
+  text: PropTypes.string.isRequired,
+  link: PropTypes.string
 };
 
 export default ContactInfoCard;

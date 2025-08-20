@@ -1,4 +1,3 @@
-import React from "react";
 import AboutMe from "./sections/AboutMe";
 import ContactMe from "./sections/ContactMe";
 import Footer from "./sections/Footer";
@@ -9,7 +8,7 @@ import TechnicalProficiency from "./sections/TechnicalProficiency";
 
 const App = () => {
   return (
-    <div>
+    <>
       <Navbar />
       <Hero />
       <TechnicalProficiency />
@@ -17,7 +16,7 @@ const App = () => {
       <MyProjects />
       <ContactMe />
       <Footer />
-    </div>
+    </>
   );
 };
 

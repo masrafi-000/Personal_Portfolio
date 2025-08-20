@@ -1,5 +1,3 @@
-import React from "react";
-
 const ProjectCard = ({ imgUrl, title, tags, link }) => {
   return (
     <div className="h-full bg-white rounded-xl overflow-hidden shadow-md mx-2">
@@ -32,6 +30,15 @@ const ProjectCard = ({ imgUrl, title, tags, link }) => {
       </div>
     </div>
   );
+};
+
+import PropTypes from "prop-types";
+
+ProjectCard.propTypes = {
+  imgUrl: PropTypes.string.isRequired,
+  title: PropTypes.string.isRequired,
+  tags: PropTypes.arrayOf(PropTypes.string).isRequired,
+  link: PropTypes.string.isRequired,
 };
 
 export default ProjectCard;

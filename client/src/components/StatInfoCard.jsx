@@ -1,4 +1,4 @@
-import React from "react";
+
 
 const StatInfoCard = ({ count, label }) => {
   return (
@@ -7,6 +7,13 @@ const StatInfoCard = ({ count, label }) => {
       <p className=" text-xs md:text-[16px] font-normal text-black leading-6 whitespace-pre-line ">{label}</p>
     </div>
   );
+};
+
+import PropTypes from 'prop-types';
+
+StatInfoCard.propTypes = {
+  count: PropTypes.oneOfType([PropTypes.string, PropTypes.number]).isRequired,
+  label: PropTypes.string.isRequired,
 };
 
 export default StatInfoCard;

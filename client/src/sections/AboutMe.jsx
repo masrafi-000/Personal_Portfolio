@@ -1,4 +1,3 @@
-import React from "react";
 import PROFILE_PIC from "../assets/images/profile-pic.png";
 import { ABOUT_ME } from "../utils/data";
 
@@ -14,7 +13,7 @@ const AboutMe = () => {
           <img
             src={PROFILE_PIC}
             alt="Profile Picture"
-            className="profile-pic rounded-3xl"
+            className="w-[300px] md:w-[370px] h-[350px] md:h-[428px] rotate-[2deg] transition-transform duration-300 ease-in-out hover:scale-105 hover:rotate-[0.5deg] rounded-3xl content-center object-cover"
           />
         </div>
 
@@ -25,7 +24,7 @@ const AboutMe = () => {
 
           <div className="text-sm text-justify leading-6 whitespace-pre-line mt-4">
             <p className="mb-4">
-              Hi there! I'm{" "}
+              {` Hi there! I'm`}
               <span className="font-semibold text-base">S M Masrafi</span> , a
               passionate{" "}
               <span className="font-semibold text-base">
@@ -42,8 +41,10 @@ const AboutMe = () => {
               that engage users and drive results.
             </p>
             <p className="mb-4">
-              Currently, I'm exploring{" "}
-              <span className="font-medium text-base">backend development</span>{" "}
+              {`Currently, I'm exploring`}
+              <span className="font-medium text-base">
+                backend development
+              </span>{" "}
               , learning{" "}
               <span className="text-base font-medium">
                 Node.js, Express.js, MongoDB, and MySQL{" "}

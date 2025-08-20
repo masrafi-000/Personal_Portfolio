@@ -1,10 +1,10 @@
-import React from "react";
-
-const SkillCard = ({ icon, skillName, description, progress }) => {
+const SkillCard = ({ icon, skillName, progress }) => {
   return (
     <div className="bg-white rounded-2xl border border-[#fce8d4] p-4">
       <div className="flex gap-3">
-        <div className="w-10 h-10 flex items-center justify-center bg-gradient-to-b from-[#fdeddd] to-[#ffffff] rounded-[7px]">{icon}</div>
+        <div className="w-10 h-10 flex items-center justify-center bg-gradient-to-b from-[#fdeddd] to-[#ffffff] rounded-[7px]">
+          {icon}
+        </div>
 
         <div className="flex-1">
           <div className="flex items-center justify-between">
@@ -20,9 +20,16 @@ const SkillCard = ({ icon, skillName, description, progress }) => {
           </div>
         </div>
       </div>
-      
     </div>
   );
+};
+
+import PropTypes from "prop-types";
+
+SkillCard.propTypes = {
+  icon: PropTypes.node.isRequired,
+  skillName: PropTypes.string.isRequired,
+  progress: PropTypes.number.isRequired,
 };
 
 export default SkillCard;

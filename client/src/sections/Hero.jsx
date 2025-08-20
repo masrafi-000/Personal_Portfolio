@@ -1,37 +1,21 @@
-// import {useState, useEffect} from "react";
-
 import { Link } from "react-scroll";
 import StatInfoCard from "../components/StatInfoCard";
 import { ABOUT_ME, MENU_LINKS, STATS } from "../utils/data";
 
 import PROFILE_PIC from "../assets/images/profile-pic.png";
-// import ICON_1 from "../assets/images/icon-1.png"
-// import ICON_2 from "../assets/images/icon-2.png"
-// import ICON_3 from "../assets/images/icon-3.png"
-// import ICON_4 from "../assets/images/icon-4.png"
 
 const Hero = () => {
-  // const handleDownloads = () => {
-  //   const blob = new Blob(['../assets/pdf/smmasrafi.pdf'], {
-  //     type: "application/pdf",
-  //   });
-  //   const link = document.createElement("a");
-  //   link.href = URL.createObjectURL(blob);
-  //   link.download = `smmasrafi.pdf`;
-  //   link.click();
-  // };
-
   return (
     <section id="hero" className="container mx-auto px-8">
-      <div className="flex flex-col lg:flex-row gap-14 items-center justify-between mt-[80px]">
-        <div className="order-2 lg:order-1 text-center lg:text-left mt-16 lg:mt-0">
+      <div className=" flex flex-col lg:flex-row justify-center items-center  gap-14  mt-[80px]">
+        <div className=" lg:basis-2/3 order-2 lg:order-1  text-center lg:text-left mt-16 lg:mt-0">
           <h3 className="text-xl lg:text-3xl font-medium text-black">
             {`👋 Hi, I'm S M Masrafi!`}
           </h3>
-          <h1 className="w-full lg:w-[580px] text-4xl lg:text-5xl font-bold leading-[50px] lg:leading-[60px] mt-3 bg-gradient-primary bg-clip-text text-transparent">
-            Frontend Developer | Exploring Backend
+          <h1 className="text-4xl lg:text-5xl font-bold leading-[50px] lg:leading-[60px] mt-3 bg-gradient-primary bg-clip-text text-transparent">
+            Frontend Developer
           </h1>
-          <div className="w-full lg:w-[650px] text-sm lg:text-base mt-4 flex flex-col gap-4 ">
+          <div className="w-full lg:w-[560px] xl:w-[650px] text-sm lg:text-base mt-4 flex flex-col gap-4 ">
             <p className="w-full">
               I specialize in crafting{" "}
               <span className="font-semibold">
@@ -64,7 +48,6 @@ const Hero = () => {
             <a
               href="/Masrafi_Resume.pdf"
               download="Masrafi_Resume"
-              // onClick={handleDownloads}
               className="flex items-center justify-center action-btn btn-scale-anim"
             >
               Download Resume
@@ -86,33 +69,12 @@ const Hero = () => {
             })}
           </div>
         </div>
-        <div className="w-[300px] md:w-[370px] md:h-[428px] bg-orange-100/50  relative order-1 lg:order-2 object-cover ">
+        <div className=" lg:basis-1/3 order-1 lg:order-2  w-[300px] md:w-[370px] md:h-[428px]  relative object-cover ">
           <img
             src={PROFILE_PIC}
             alt="Profile Pic"
-            className="profile-pic rounded-3xl"
+            className="w-[300px] md:w-[370px] h-[350px] md:h-[428px] rotate-[2deg] transition-transform duration-300 ease-in-out hover:scale-105 hover:rotate-[0.5deg] rounded-3xl content-center object-cover"
           />
-          {/* 
-        <img
-          src={ICON_1}
-          alt="Icon 1"
-          className="icon-img -left-10 bottom-20 rotate-[1.75deg]"
-        />
-        <img
-          src={ICON_2}
-          alt="Icon 2"
-          className="icon-img left-5 md:left-10 -bottom-2 rotate-[2.75deg] "
-        />
-        <img
-          src={ICON_3}
-          alt="Icon 3"
-          className="icon-img left-[110px] md:left-[150px] -bottom-6 rotate-[3.75deg] "
-        />
-        <img
-          src={ICON_4}
-          alt="Icon 4"
-          className="icon-img left-[200px] md:left-[255px] -bottom-9 md:-bottom-10 rotate-[4.75deg] "
-        /> */}
         </div>
       </div>
 
