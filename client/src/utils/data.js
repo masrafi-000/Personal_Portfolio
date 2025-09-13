@@ -16,11 +16,14 @@ import { SiExpress, SiMongodb, SiMysql, SiNetlify, SiPostman, SiTailwindcss, SiT
 import { VscCommentUnresolved, VscTerminalPowershell, VscVscode } from "react-icons/vsc";
 
 import { nanoid } from "nanoid";
+import PROJECT_IMG_8 from "../assets/images/boizar.png";
+import PROJECT_IMG_7 from "../assets/images/estatein.png";
 import PROJECT_IMG_1 from "../assets/images/project-1.png";
 import PROJECT_IMG_2 from "../assets/images/project-2.png";
 import PROJECT_IMG_3 from "../assets/images/project-3.png";
 import PROJECT_IMG_4 from "../assets/images/project-4.png";
 import PROJECT_IMG_5 from "../assets/images/project-5.png";
+import PROJECT_IMG_6 from "../assets/images/taskmanager.png";
 
 export const MENU_LINKS = [
     {id:nanoid(), label:"Home", offset: -100, to: "hero"},
@@ -221,6 +224,28 @@ export const ABOUT_ME = {
 }
 
 export const PROJECTS = [
+    {
+        id: nanoid(),
+        title: "Boizaar | Next.js, TypeScript, React.js (Ongoing)",
+        image: PROJECT_IMG_8,
+        tags: ["Next.js", "TypeScript","React.js", "React-hook-form","Zod", "Zustand"],
+        link: "https://real-state-app-masrafi-000.vercel.app/"
+    },
+    {
+        id: nanoid(),
+        title: "Estatein | Next.js, TypeScript, React.js (Ongoing - Not Responsive)",
+        image: PROJECT_IMG_7,
+        tags: ["Next.js", "TypeScript","React.js", "React-hook-form","Zod"],
+        link: "https://real-state-app-masrafi-000.vercel.app/"
+    },
+    {
+        id: nanoid(),
+        title: "Task Manager | Next.js, TypeScript, Redux-toolkit (Ongoing-Server inactive)",
+        image: PROJECT_IMG_6,
+        tags: ["Next.js", "TypeScript","React.js", "Redux-toolkit",],
+        link: "https://mytaskmanager-masrafi-000.vercel.app/"
+
+    },
     {
         id: nanoid(),
         title: "Frontend Landing Page | TypeScript, Next.js, React JS, Tailwind CSS",
