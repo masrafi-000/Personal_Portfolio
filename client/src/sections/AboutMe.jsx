@@ -24,7 +24,7 @@ const AboutMe = () => {
 
           <div className="text-sm text-justify leading-6 whitespace-pre-line mt-4">
             <p className="mb-4">
-              {` Hi there! I'm`}
+              {`Hi there! I'm`}{" "}
               <span className="font-semibold text-base">S M Masrafi</span> , a
               passionate{" "}
               <span className="font-semibold text-base">
@@ -41,7 +41,7 @@ const AboutMe = () => {
               that engage users and drive results.
             </p>
             <p className="mb-4">
-              {`Currently, I'm exploring`}
+              {`Currently, I'm exploring`}{" "}
               <span className="font-medium text-base">
                 backend development
               </span>{" "}
