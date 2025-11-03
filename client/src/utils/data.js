@@ -17,11 +17,12 @@ import { VscCommentUnresolved, VscTerminalPowershell, VscVscode } from "react-ic
 
 import { nanoid } from "nanoid";
 import PROJECT_IMG_8 from "../assets/images/boizar.png";
+import PROJECT_IMG_9 from "../assets/images/cineticket.png";
 import PROJECT_IMG_7 from "../assets/images/estatein.png";
+import PROJECT_IMG_10 from "../assets/images/estatery.png";
 import PROJECT_IMG_1 from "../assets/images/project-1.png";
 import PROJECT_IMG_2 from "../assets/images/project-2.png";
 import PROJECT_IMG_3 from "../assets/images/project-3.png";
-import PROJECT_IMG_4 from "../assets/images/project-4.png";
 import PROJECT_IMG_5 from "../assets/images/project-5.png";
 import PROJECT_IMG_6 from "../assets/images/taskmanager.png";
 
@@ -226,6 +227,20 @@ export const ABOUT_ME = {
 export const PROJECTS = [
     {
         id: nanoid(),
+        title: "Estatery | Next.js, TypeScript, React.js, Zustand (Ongoing)",
+        image: PROJECT_IMG_10,
+        tags: ["Next.js", "TypeScript","React.js", "RHF", "Zod", "Zustand"],
+        link: "https://github.com/masrafi-000/Estatery"
+    },
+    {
+        id: nanoid(),
+        title: "CineTicket | Next.js, TypeScript, React.js (Ongoing)",
+        image: PROJECT_IMG_9,
+        tags: ["Next.js", "TypeScript","React.js",],
+        link: "https://cine-ticket-masrafi-000.vercel.app"
+    },
+    {
+        id: nanoid(),
         title: "Boizaar | Next.js, TypeScript, React.js (Ongoing)",
         image: PROJECT_IMG_8,
         tags: ["Next.js", "TypeScript","React.js", "React-hook-form","Zod", "Zustand"],
@@ -268,13 +283,6 @@ export const PROJECTS = [
         tags:["React", "JavaScript","Three.js" , "Tailwind CSS", ],
         link: "https://apple-clone-mu-seven.vercel.app/"
 
-    },
-    {
-        id: nanoid(),
-        title: "Full stack Personal Portfolio Website using React | JavaScript, Express, React JS, Node JS",
-        image: PROJECT_IMG_4,
-        tags:["React", "Express", "JavaScript", "Node.js", "Tailwind CSS"],
-        link: "https://personal-portfolio-pi-gray-20.vercel.app/"
     },
     {
         id: nanoid(),
