@@ -230,7 +230,7 @@ export const PROJECTS = [
         title: "Estatery | Next.js, TypeScript, React.js, Zustand (Ongoing)",
         image: PROJECT_IMG_10,
         tags: ["Next.js", "TypeScript","React.js", "RHF", "Zod", "Zustand"],
-        link: "https://github.com/masrafi-000/Estatery"
+        link: "https://estatery-masrafi.vercel.app/"
     },
     {
         id: nanoid(),
