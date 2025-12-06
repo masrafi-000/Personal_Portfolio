@@ -244,7 +244,7 @@ export const PROJECTS = [
         title: "Boizaar | Next.js, TypeScript, React.js (Ongoing)",
         image: PROJECT_IMG_8,
         tags: ["Next.js", "TypeScript","React.js", "React-hook-form","Zod", "Zustand"],
-        link: "https://real-state-app-masrafi-000.vercel.app/"
+        link: "https://trio-beam-boi-zaar-masrafi-000.vercel.app/"
     },
     {
         id: nanoid(),
